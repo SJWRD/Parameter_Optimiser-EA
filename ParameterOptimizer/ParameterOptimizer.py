@@ -5,9 +5,9 @@ import random
 import pickle
 
 
-# =======================================================
+# ==============================================================================================
 # GPU not supported yet
-# =======================================================
+# ==============================================================================================
 
 # from pycuda import autoinit
 # from pycuda.compiler import SourceModule
@@ -39,7 +39,7 @@ import pickle
 # # Register the CUDA-based crossover function in DEAP
 # tools.cxBlendGPU = cxBlendGPU
 
-# =======================================================
+# ==============================================================================================
 
 
 class ParameterOptimizer:
@@ -141,7 +141,7 @@ class ParameterOptimizer:
         if self.feedback:
             print(f"\n{'gen':<8}{'nevals':<8}{'avg':<12}{'std':<8}{'min':<12}{'max':<12}")
 
-        # ======================================================= START optimization loop
+        # ============================================================================================== START optimization loop
         # Loop for every generation
         for gen in range(self.generations):
 
@@ -166,7 +166,7 @@ class ParameterOptimizer:
             if save:
                 self.save_state(state_file, population, gen + 1)
 
-        # ======================================================= END optimization loop
+        # ============================================================================================== END optimization loop
 
         # Get the best individual
         best_ind = tools.selBest(population, 1)[0]
