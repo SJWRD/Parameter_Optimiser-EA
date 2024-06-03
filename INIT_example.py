@@ -26,7 +26,7 @@ class CustomOptimizer(ParameterOptimizer):
         # Extract the parameters from the individual
         params = {param_name: val for (param_name, _, _), val in zip(self.param_ranges, individual)}
 
-        # Get parameters from current individual
+        # Split parameters
         param1 = params["param1"]
         param2 = params["param2"]
         param3 = params["example1"]
