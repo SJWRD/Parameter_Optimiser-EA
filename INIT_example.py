@@ -41,5 +41,5 @@ class CustomOptimizer(ParameterOptimizer):
 optimizer = CustomOptimizer(param_config, generations=generations, population_size=population_size)
 best_parameters = optimizer.optimize(feedback=True)
 
-# OR if you wat to save/load an optimiser state
+# OR if you want to save/load an optimiser state
 # best_parameters = optimizer.optimize(resume=True, save=True, state_file='optimizer_state.pkl', feedback=True)
